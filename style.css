@@ -1,0 +1,18 @@
+*{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+body{
+    height: 100dvh;
+    display: grid;
+    place-items: center;
+    background: black;
+    color: white;
+}
+h1{
+    font-size: 5em;
+    padding: 20px;
+    border-bottom: 1px solid white;
+}
