@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
     box-sizing: border-box;
 }
 
@@ -14,74 +14,45 @@ body {
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    gap: 15px;
-    width: 100%;
-    height: 100%;
-    padding: 20px;
-}
-
-.item {
-    border: 1px solid lightgray;
-    border-radius: 10px;
-    padding: 20px;
-    background-color: white;
-}
-
-.div1 {
-    grid-column: span 2 / span 2;
-    grid-row: span 3 / span 3;
-}
-
-.div2 {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-column-start: 1;
-    grid-row-start: 4;
-}
-
-.div3 {
-    grid-row: span 5 / span 5;
-    grid-column-start: 3;
-    grid-row-start: 1;
     display: flex;
     flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
+    padding: 20px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 10px;
-}
-.inner-item{
-    width: 100%;
-    height: calc(100% / 3);
-    background-color: lightslategray;
+    width: 90%;
+    position: sticky;
+    top: 25px;
+    border: 1px solid black;
     border-radius: 10px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.menu .navitem{
+    text-decoration: none;
+    color: black;
+}
+
+.section {
+    width: 95dvw;
+    height: 100dvh;
     display: grid;
     place-items: center;
-    font-size: 2.5em;
-    color: white;
 }
-
-.div4 {
-    grid-row: span 4 / span 4;
-    grid-column-start: 4;
-    grid-row-start: 1;
-}
-
-.div5 {
-    grid-column-start: 4;
-    grid-row-start: 5;
-}
-
-.div7 {
-    grid-row: span 3 / span 3;
-    grid-column-start: 5;
-    grid-row-start: 3;
-}
-
-.div8 {
-    grid-row: span 2 / span 2;
-    grid-column-start: 5;
-    grid-row-start: 1;
+.sectionItem{
+    width: 90%;
+    height: 90%;
+    border: 1px solid black;
+    border-radius: 10px;
 }
