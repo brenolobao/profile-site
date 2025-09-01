@@ -5,38 +5,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Breno Lobão - Portifolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <h2>Breno Lobão</h2>
-            <div class="menu">
-                <a href="#home" class="navitem">Home</a>
-                <a href="#sobre" class="navitem">Sobre</a>
-                <a href="#projetos" class="navitem">Projetos</a>
-                <a href="#experiencias" class="navitem">Experiencias</a>
-                <a href="#contatos" class="navitem">Contatos</a>
-            </div>
+    <header>
+        <nav class="container">
+            <div class="logo">BL</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#projects">Projetos</a></li>
+                <li><a href="#experience">Experiência</a></li>
+            </ul>
+            <button class="theme-toggle" onclick="toggleTheme()">
+                <i class="fas fa-moon"></i>
+            </button>
         </nav>
-        <section class="section" id="home">
-            <div class="sectionItem"></div>
-        </section>
-        <section class="section" id="sobre">
-            <div class="sectionItem"></div>
-        </section>
-        <section class="section" id="projetos">
-            <div class="sectionItem"></div>
-        </section>
-        <section class="section" id="experiencias">
-            <div class="sectionItem"></div>
-        </section>
-        <section class="section" id="contatos">
-            <div class="sectionItem"></div>
-        </section>
-    </div>
+    </header>
 
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>Breno Lobão Silva Barbosa</h1>
+                <p class="subtitle">Desenvolvedor Frontend Júnior</p>
+                <p class="description">
+                    Desenvolvedor apaixonado por criar experiências web modernas e interativas.
+                    Especializado em React, Next.js e Vue.js, sempre em busca de novos desafios
+                    e oportunidades de crescimento.
+                </p>
+                <a href="#about" class="cta-button">Conheça mais</a>
+            </div>
+        </section>
+
+        <section id="about" class="section about">
+            <div class="container">
+                <h2 class="section-title">Sobre Mim</h2>
+                <div class="about-content">
+                    <div class="contact-info">
+                        <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Contato</h3>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Aracati-CE, Brasil</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(88) 9 9435-4959</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>brenolobao54@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <a href="https://github.com/brenolobao" target="_blank"
+                                style="color: inherit; text-decoration: none;">GitHub</a>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-linkedin"></i>
+                            <a href="https://www.linkedin.com/in/breno-lob%C3%A3o-b81013203" target="_blank"
+                                style="color: inherit; text-decoration: none;">LinkedIn</a>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 2rem; color: var(--text-primary);">Habilidades Técnicas</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <h4>HTML5</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <h4>CSS3</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <h4>JavaScript</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <h4>React</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-cube"></i>
+                                <h4>Next.js</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-vuejs"></i>
+                                <h4>Vue.js</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-bootstrap"></i>
+                                <h4>Bootstrap</h4>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-java"></i>
+                                <h4>Java</h4>
+                            </div>
+                        </div>
+                        <div style="margin-top: 3rem;">
+                            <h4 style="margin-bottom: 1rem; color: var(--text-primary);">Formação</h4>
+                            <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                                <strong>Análise e Desenvolvimento de Sistemas</strong> - UNIASSELVI (Completo)
+                            </p>
+                            <p style="color: var(--text-secondary);">
+                                <strong>Ensino Médio Completo</strong> - E. E. M Beni Carvalho
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Meus Projetos</h2>
+                <div id="projects-loading" class="loading">
+                    <div class="spinner"></div>
+                    <span>Carregando projetos do GitHub...</span>
+                </div>
+                <div id="projects-carousel" class="projects-carousel" style="display: none;">
+                    <div class="projects-container"></div>
+                    <div class="carousel-nav">
+                        <button class="carousel-btn" onclick="previousProject()">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel-btn" onclick="nextProject()">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="section experience">
+            <div class="container">
+                <h2 class="section-title">Experiência Profissional</h2>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Desenvolvedor Júnior</h3>
+                            <p class="experience-company">STARKE BRASIL DEV</p>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Tempo integral</p>
+                        </div>
+                        <div class="experience-period">Abr 2021 - Dez 2021</div>
+                    </div>
+                    <ul style="color: var(--text-secondary); line-height: 1.8;">
+                        <li>Criação de Landing Page completa usando Next.js</li>
+                        <li>Desenvolvimento de componentes web reutilizáveis usando React.js</li>
+                    </ul>
+                </div>
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <div>
+                            <h3 class="experience-title">Estagiário</h3>
+                            <p class="experience-company">STARKE BRASIL DEV</p>
+                            <p style="color: var(--text-secondary); margin-top: 0.5rem;">Meio período</p>
+                        </div>
+                        <div class="experience-period">Fev 2021 - Abr 2021</div>
+                    </div>
+                    <ul style="color: var(--text-secondary); line-height: 1.8;">
+                        <li>Refatoração de código legado</li>
+                        <li>Criação de componentes web em HTML, CSS e JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
